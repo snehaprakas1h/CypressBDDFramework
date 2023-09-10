@@ -1,8 +1,11 @@
+@login @regression
 Feature: Webdriver University- Login Portal Page
 
     Background: Pre conditions
         Given I navigate to the webdriver university homepage
         When I click on login portal button
+        When I wait for 2 seconds
+        Given I navigate to webdriveruniversity login page
 
     Scenario Outline: Validate valid login and invalid login credentials
         When I type username '<userName>'

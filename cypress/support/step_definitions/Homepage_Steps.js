@@ -1,16 +1,23 @@
 /// <reference types="cypress"/>
-import { Given, When } from "@badeball/cypress-cucumber-preprocessor";
+import { Given, When, Before } from "@badeball/cypress-cucumber-preprocessor";
+import Base_PO from "../Page_objects/Base_PO";
+import Homepage_PO from "../Page_objects/Homepage_PO";
 
-const url = "http://www.webdriveruniversity.com/";
+const basePage = new Base_PO();
+const homePage = new Homepage_PO();
+
+Before(() => {
+  cy.log("Executes before each scenario/test in homepage steps");
+});
 
 Given("I navigate to the webdriver university homepage", () => {
-  cy.visit(url);
+  homePage.navigateToHomePage();
 });
 
 When("I click on contact us button", () => {
-  cy.get("#contact-us").invoke("removeAttr", "target").click(); //to open a link in the same tab
+  homePage.clickOn_ContactUs_Button();
 });
 
 When("I click on login portal button", () => {
-    cy.get("#login-portal").invoke("removeAttr", "target").click(); //to open a link in the same tab
-  });
+  homePage.clickOn_LoginPortal_Button();
+});

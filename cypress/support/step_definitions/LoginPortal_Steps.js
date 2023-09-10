@@ -1,20 +1,27 @@
 /// <reference types="cypress"/>
-import { Then, When } from "@badeball/cypress-cucumber-preprocessor";
+import { Given, Then, When } from "@badeball/cypress-cucumber-preprocessor";
+import Loginpage_PO from "../Page_objects/Loginpage_PO";
+
+const loginPage = new Loginpage_PO()
+
+Given("I navigate to webdriveruniversity login page",()=>{
+  loginPage.navigateTo_Login_Page();
+})
 
 When("I type username {string}", (userName) => {
-  cy.get("#text").type(userName);
+  loginPage.type_Username(userName);
+ 
 });
 
 When("I type password {string}", (password) => {
-  cy.get("#password").type(password);
+  loginPage.type_Password(password);
+  
 });
 
 When("I click on login button", () => {
-  cy.get("login-button").click();
+  loginPage.clickOn_Login_Button();
 });
 
 Then("I should be presented with message in an alert box {string}", (message) => {
-  cy.on("window:alert", (str) => {
-    expect(str).to.equal(message);
-  });
+  loginPage.assertAlertText(message);
 });

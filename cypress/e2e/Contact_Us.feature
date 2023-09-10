@@ -1,9 +1,11 @@
+@contact-us @regression
 Feature: Webdriver University- Contact Us Page
 
     Background: Pre conditions
         Given I navigate to the webdriver university homepage
         When I click on contact us button
 
+    @smoke
     Scenario: Valid Contact Us Form Submission
         When I type a first name
         And I type a last name
@@ -19,6 +21,7 @@ Feature: Webdriver University- Contact Us Page
         And I click on submit button
         Then I should be presented with a unsuccessful contact us submission message
 
+    @smoke
     Scenario: Valid Contact Us Form Submission -Using specific data
         When I type a first name "sarah"
         And I type a last name "Doe"
