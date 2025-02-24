@@ -1,11 +1,11 @@
-# Cypress BDD Project
+# CypressBDDFramework
 
 ## 📌 Overview
 This project is a **Cypress BDD** (Behavior-Driven Development) framework used for end-to-end testing. It follows the **Cucumber** style, using `.feature` files to write test scenarios in **Gherkin syntax**.
 
 ## 🏗️ Project Structure
 ```
-Cypress_BDD-main/
+CypressBDDFramework/
 ├── cypress/
 │   ├── e2e/                # Feature files (Gherkin syntax)
 │   │   ├── Contact_Us.feature
@@ -30,8 +30,8 @@ Cypress_BDD-main/
 ### Installation Steps
 1. **Clone the Repository**
    ```sh
-   git clone https://github.com/snehaprakas1h/Cypress_BDD.git
-   cd Cypress_BDD-main
+   git clone https://github.com/snehaprakas1h/CypressBDDFramework.git
+   cd CypressBDDFramework
    ```
 2. **Install Dependencies**
    ```sh
@@ -66,6 +66,3 @@ Feature: Login Functionality
 
 ## 📧 Contact
 For any issues or improvements, please raise an issue or contribute to the repository.
-
----
-
