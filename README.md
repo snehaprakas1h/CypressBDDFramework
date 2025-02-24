@@ -68,5 +68,4 @@ Feature: Login Functionality
 For any issues or improvements, please raise an issue or contribute to the repository.
 
 ---
-**Happy Testing! 🚀**
 
