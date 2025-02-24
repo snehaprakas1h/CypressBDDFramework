@@ -30,7 +30,7 @@ Cypress_BDD-main/
 ### Installation Steps
 1. **Clone the Repository**
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/snehaprakas1h/Cypress_BDD.git
    cd Cypress_BDD-main
    ```
 2. **Install Dependencies**
